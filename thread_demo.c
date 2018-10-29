@@ -42,7 +42,7 @@ int main(){
 
 
 // 线程A 方法
-void * print_a(void *a){
+static void * print_a(void *a){
   for(int i = 0;i < 10; i++){
       sleep(1);
       puts("aa  >>> thread - 1");
@@ -52,7 +52,7 @@ void * print_a(void *a){
 }
 
 // 线程B 方法
-void * print_b(void *b){
+static void * print_b(void *b){
   for(int i=0;i<20;i++){
       sleep(1);
       puts("bb    >>>    thread - 2");
